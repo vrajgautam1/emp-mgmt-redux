@@ -1,0 +1,133 @@
+:root {
+  --lavender: #f8f4ff;
+  --white-smoke: #fafafa;
+  --violet: #705ac1;
+  --dark-slate: #1e1e1e;
+  --light-gray: #f1f1f1;
+  --text-dark: #333;
+  --text-muted: #6c757d;
+  --input-bg: #ffffff;
+  --border-radius: 0.75rem;
+}
+
+/* Base */
+body {
+  background-color: var(--lavender);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Card styling */
+.card-theme {
+  background-color: var(--white-smoke);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-theme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+/* Input / select fields */
+.input-theme {
+  background-color: var(--input-bg);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.input-theme:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(112, 90, 193, 0.3);
+}
+
+/* Buttons */
+.btn-lavender {
+  background-color: var(--violet);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-lavender:hover {
+  background-color: #5e4cb0;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--violet);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* List item in recent slips / performers */
+.list-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: var(--dark-slate);
+  color: var(--light-gray);
+}
+
+.dark-theme .card-theme {
+  background-color: #2a2a2a;
+  color: var(--light-gray);
+  border-color: #3a3a3a;
+}
+
+.dark-theme .card-title {
+  color: #ffffff;
+}
+
+.dark-theme .input-theme {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-theme .input-theme::placeholder {
+  color: #999;
+}
+
+.dark-theme .btn-lavender {
+  background-color: #8d7ae7;
+}
+
+.dark-theme .btn-lavender:hover {
+  background-color: #7a6ace;
+}
+
+.dark-theme .text-muted {
+  color: #bbb !important;
+}
+
+.dark-theme .list-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

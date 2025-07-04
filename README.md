@@ -15,30 +15,7 @@ A modern and modular Employee Management Dashboard built with **React 18**, **Re
   - ✅ Task Management
   - 💬 Real-time Chat UI
   - 📄 Salary Slip Generator & Viewer
-
----
-
-## 📂 Project Structure
-
-src/
-│
-├── app/ # Redux store config
-├── components/ # Reusable UI components
-│ ├── Header/
-│ ├── Aside/
-│ └── Modal/
-├── features/ # Redux slices
-│ ├── auth/
-│ ├── chats/
-│ ├── employees/
-│ ├── tasks/
-│ └── modal/
-├── pages/
-│ └── UserDashboard.jsx
-└── main.jsx # Entry point
-
-
----
+    
 
 ## 🧑‍💻 Getting Started
 

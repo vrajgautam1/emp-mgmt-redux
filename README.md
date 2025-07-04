@@ -1,12 +1,58 @@
-# React + Vite
+# 🧑‍💼 Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and modular Employee Management Dashboard built with **React 18**, **Redux Toolkit**, and **Bootstrap 5** — designed for performance, scalability, and clean developer experience. Created and maintained by **Vraj Gautam**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ⚛️ **React 18 + Vite** for ultra-fast development
+- 🧰 **Redux Toolkit** for efficient state management
+- 🎨 **Bootstrap 5** responsive styling
+- 📁 Clean & scalable folder structure
+- 🌙 Dark mode support
+- 👥 Employee Dashboard with:
+  - ✅ Task Management
+  - 💬 Real-time Chat UI
+  - 📄 Salary Slip Generator & Viewer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Project Structure
+
+src/
+│
+├── app/ # Redux store config
+├── components/ # Reusable UI components
+│ ├── Header/
+│ ├── Aside/
+│ └── Modal/
+├── features/ # Redux slices
+│ ├── auth/
+│ ├── chats/
+│ ├── employees/
+│ ├── tasks/
+│ └── modal/
+├── pages/
+│ └── UserDashboard.jsx
+└── main.jsx # Entry point
+
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 📦 Installation
+
+```powershell
+# Clone the repository
+git clone <https://github.com/vrajgautam1/emp-mgmt-redux.git>
+
+# Navigate into the directory
+cd your-project-folder
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev

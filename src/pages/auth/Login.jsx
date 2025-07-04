@@ -24,7 +24,7 @@ const Login = () => {
         navigate("/UserDashboard", { state: { selectedEmail: employeeEmail } });
       }
     }
-  }, [isLoggedIn, role, adminEmail, employeeEmail, navigate]);
+  }, [isLoggedIn, role, employeeEmail, navigate]);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -41,34 +41,46 @@ const Login = () => {
   };
 
   return (
-    <section className="bg-light d-flex align-items-center justify-content-center vh-100">
-      <div className="card shadow-lg p-4 w-100" style={{ maxWidth: "400px" }}>
+    <section
+      className="d-flex justify-content-center align-items-center vh-100"
+      style={{
+        background: "linear-gradient(to right, #e0eafc, #cfdef3)",
+      }}
+    >
+      <div
+        className="shadow-lg p-4 rounded-4 bg-white border border-light w-100"
+        style={{
+          maxWidth: "420px",
+          backdropFilter: "blur(10px)",
+        }}
+      >
         <div className="text-center mb-4">
-          <IoPersonCircleOutline size={50} />
-          <h4 className="mt-2">Welcome {role === "admin" ? "Admin" : "Employee"}</h4>
+          <IoPersonCircleOutline size={60} className="text-primary mb-2" />
+          <h4 className="fw-bold mb-1">
+            Welcome {role === "admin" ? "Admin" : "Employee"}
+          </h4>
+          <small className="text-muted">Please login to continue</small>
         </div>
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} className="d-grid gap-3">
           {role === "admin" ? (
-            <div className="mb-3">
+            <div>
               <label className="form-label">Admin Email</label>
               <input
                 type="email"
+                className="form-control rounded-3"
                 placeholder="Enter admin email"
-                className="form-control"
                 value={adminEmail}
                 onChange={(e) => setAdminEmail(e.target.value)}
-                required
               />
             </div>
           ) : (
-            <div className="mb-3">
+            <div>
               <label className="form-label">Select Employee Email</label>
               <select
-                className="form-select"
+                className="form-select rounded-3"
                 value={employeeEmail}
                 onChange={(e) => setEmployeeEmail(e.target.value)}
-                required
               >
                 <option value="">-- Select Email --</option>
                 {employees.length > 0 ? (
@@ -84,53 +96,50 @@ const Login = () => {
             </div>
           )}
 
-          <div className="mb-3">
+          <div>
             <label className="form-label">Password</label>
             <input
               type="password"
+              className="form-control rounded-3"
               placeholder="Enter password"
-              className="form-control"
               required
             />
           </div>
 
-          <div className="mb-3 d-flex gap-3 align-items-center justify-content-center">
-            <strong>You are:</strong>
+          <div className="d-flex justify-content-center gap-4">
             <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
-                id="admin"
                 name="role"
+                id="admin"
                 value="admin"
                 checked={role === "admin"}
                 onChange={(e) => setRole(e.target.value)}
               />
-              <label className="form-check-label" htmlFor="admin">Admin</label>
+              <label className="form-check-label" htmlFor="admin">
+                Admin
+              </label>
             </div>
-
             <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
-                id="employee"
                 name="role"
+                id="employee"
                 value="employee"
                 checked={role === "employee"}
                 onChange={(e) => setRole(e.target.value)}
               />
-              <label className="form-check-label" htmlFor="employee">Employee</label>
+              <label className="form-check-label" htmlFor="employee">
+                Employee
+              </label>
             </div>
           </div>
 
-          <div className="d-grid">
-            <button
-              type="submit"
-              className="btn btn-primary d-flex align-items-center justify-content-center gap-2"
-            >
-              Login <BiLogIn size={20} />
-            </button>
-          </div>
+          <button className="btn btn-primary d-flex align-items-center justify-content-center gap-2 mt-2">
+            Login <BiLogIn size={20} />
+          </button>
         </form>
       </div>
     </section>
